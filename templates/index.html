@@ -12,14 +12,19 @@ Home
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      
-      <img src="https://asset.findingschool.com/attachments/SCH000224/cover.webp?1734593986" class="d-block w-100" alt="slide1">
+
+      <img src="https://asset.findingschool.com/attachments/SCH000224/cover.webp?1734593986" class="d-block w-100"
+        alt="slide1">
     </div>
     <div class="carousel-item">
-      <img src="https://images.prismic.io/brightworld%2Fc7566d09-2425-458d-91ec-f4e0fab149b9_westonbirt-school.jpg?auto=format%2Ccompress&rect=0%2C0%2C2000%2C1172&w=1024&h=600" class="d-block w-100" alt="slide2">
+      <img
+        src="https://images.prismic.io/brightworld%2Fc7566d09-2425-458d-91ec-f4e0fab149b9_westonbirt-school.jpg?auto=format%2Ccompress&rect=0%2C0%2C2000%2C1172&w=1024&h=600"
+        class="d-block w-100" alt="slide2">
     </div>
     <div class="carousel-item">
-      <img src="https://sisschools.org/wp-content/uploads/2025/02/elementary-school-international-school-girls-and-b-2023-11-27-04-49-56-utc-1-1024x600.jpg" class="d-block w-100" alt="slide3">
+      <img
+        src="https://sisschools.org/wp-content/uploads/2025/02/elementary-school-international-school-girls-and-b-2023-11-27-04-49-56-utc-1-1024x600.jpg"
+        class="d-block w-100" alt="slide3">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -30,5 +35,32 @@ Home
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
+<div>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Father Name</th>
+        <th scope="col">Join Date</th>
+        <th scope="col">Student Class</th>
+        <th scope="col">Fees</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for rec in admissiondata %}
+
+      <tr>
+        <th >{{rec.stu_name}}</th>
+        <td>{{rec.stu_father}}</td>
+        <td>{{rec.joindate}}</td>
+        <td>{{rec.stu_class}}</td>
+        <td>{{rec.fees}}</td>
+   
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
 {% endblock content%}

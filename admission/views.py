@@ -1,8 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
+from admission.models import Admission
 def home(request):
-    return render(request,'index.html',{})
+    # return render(request,'index.html',{})
+    data=Admission.objects.all()
+    res=render(request,'index.html',{'admissiondata':data})
+    return res
 
 
 def products(request):
