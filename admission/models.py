@@ -5,7 +5,7 @@ class Admission(models.Model):
     stu_name=models.CharField(max_length=100)
     stu_father=models.CharField(max_length=100)
     joindate=models.DateField()
-    stu_class=models.CharField(max_length=20,unique=True)
+    stu_class=models.CharField(max_length=20)
     fees=models.PositiveBigIntegerField()
    
     # def __str__(self):

@@ -1,0 +1,8 @@
+
+-----------------------------
+ID              : 1
+Name            : john
+Father          : john kim
+JoinDate        : 2026-10-01
+Course          : java
+Fees            : 3000
